@@ -1,0 +1,94 @@
+
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Practica Emmet</title>
+<!--		<link rel="stylesheet" href="../assets/css/templates/foundation.css"/>-->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="../assets/js/modernizr.js"></script>
+	</head>
+<body>
+
+<!-- .container>((.row>(.col-md-3>h1>img[src="http://placehold.it/400x100&text=Logo"])+(.col-md-9>ul.list-inline.text-right>li*4>a[href="#"].btn{Link $}))+(.row>.col-md-12>img.img-responsive[src="http://placehold.it/1920x400&text=Slide"]+hr)+(.row>(.col-md-4>img.img-responsive[src="http://placehold.it/400x300&text=Imagen"])+(.col-md-8>h4{This is a content section.}+.row>.col-md-6*2>p>lorem))+(.row>(.col-md-8>h4{This is a content section.}+p*2>lorem)+(.col-md-4>img.img-responsive[src="http://placehold.it/400x300&text=Imagen"]))+(footer.row>.col-md-12>hr+.row>(.col-md-6>p{&copy; Copyright no one at all. Go to town.})+(.col-md-6>ul.list-inline.text-right>li*4>a{Link $})))-->
+
+<!--.row>(.col-md-3>h1>img[src="http://placehold.it/400x100&text=Logo"])+(.col-md-9>ul.list-inline.text-right>li*4>a[href="#"].btn{Link $}-->
+<div class="container">
+ <div class="row">
+ 	<div class="col-md-3">
+ 		<h1><img src="http://placehold.it/400x100&text=Logo" alt=""></h1>
+ 	</div>
+ 	<div class="col-md-9">
+ 		<ul class="list-inline text-right">
+ 			<li><a href="#" class="btn">Link 1</a></li>
+ 			<li><a href="#" class="btn">Link 2</a></li>
+ 			<li><a href="#" class="btn">Link 3</a></li>
+ 			<li><a href="#" class="btn">Link 4</a></li>
+ 		</ul>
+ 	</div>
+ </div>
+
+<!-- .row>.col-md-12>img.img-responsive[src="http://placehold.it/1920x400&text=Slide"]+hr-->
+   <div class="row">
+   	<div class="col-md-12">
+   		<img src="http://placehold.it/1920x400&text=Slide" alt="" class="img-responsive">
+   		<hr>
+   	</div>
+   </div>
+
+<!--   .row>(.col-md-4>img.img-responsive[src="http://placehold.it/400x300&text=Imagen"])+(.col-md-8>h4{This is a content section.}+.row>.col-md-6*2>p>lorem)-->
+   <div class="row">
+   	<div class="col-md-4">
+   		<img src="http://placehold.it/400x300&text=Imagen" alt="" class="img-responsive">
+   	</div>
+   	<div class="col-md-8">
+   		<h4>This is a content section.</h4>
+   		<div class="row">
+   			<div class="col-md-6">
+   				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam dignissimos repudiandae, eos quas commodi error earum modi nisi distinctio aliquam nemo, dicta nam animi, placeat voluptatum iure accusantium quisquam illo.</p>
+   			</div>
+   			<div class="col-md-6">
+   				<p>Excepturi, blanditiis, earum? Culpa sint eveniet soluta voluptate, ipsam nihil est tenetur. Maxime et ea deserunt consectetur ut delectus saepe blanditiis illum, veritatis hic eaque laboriosam impedit, cumque placeat sapiente!</p>
+   			</div>
+   		</div>
+   	</div>
+   </div>
+   
+<!--    .row>(.col-md-8>h4{This is a content section.}+p*2>lorem)+(.col-md-4>img.img-responsive[src="http://placehold.it/400x300&text=Imagen"])-->
+ 	 <div class="row">
+ 	 	<div class="col-md-8">
+ 	 		<h4>This is a content section.</h4>
+ 	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni inventore illum, cupiditate! Praesentium repellendus quas magnam quos reprehenderit, ut odit, commodi culpa blanditiis at voluptatibus iure ducimus pariatur maxime deserunt.</p>
+ 	 		<p>Incidunt eligendi quisquam, nam nulla, autem quibusdam voluptatibus, accusamus vero, quis recusandae minus! Tempore cum consectetur quos, perferendis iste repellendus, laborum aut hic ipsam harum reprehenderit itaque ullam, est ex.</p>
+ 	 	</div>
+ 	 	<div class="col-md-4">
+ 	 		<img src="http://placehold.it/400x300&text=Imagen" alt="" class="img-responsive">
+ 	 	</div>
+ 	 </div>
+  
+<!--   footer.row>.col-md-12>hr+.row>(.col-md-6>p{&copy; Copyright no one at all. Go to town.})+(.col-md-6>ul.list-inline.text-right>li*4>a{Link $})-->
+  <footer class="row">
+  	<div class="col-md-12">
+  		<hr>
+  		<div class="row">
+  			<div class="col-md-6">
+  				<p>&copy; Copyright no one at all. Go to town.</p>
+  			</div>
+  			<div class="col-md-6">
+  				<ul class="list-inline text-right">
+  					<li><a href="">Link 1</a></li>
+  					<li><a href="">Link 2</a></li>
+  					<li><a href="">Link 3</a></li>
+  					<li><a href="">Link 4</a></li>
+  				</ul>
+  			</div>
+  		</div>
+  	</div>
+  </footer>
+  
+ </div> <!-- container-->
+
+</body>
+</html>

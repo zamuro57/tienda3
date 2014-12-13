@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Mi tienda Online</title>
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100italic,300italic,100' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="fonts/nueva/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/ecommercelight.css">
+  <!--[if lt IE 9]>
+  <script src="dist/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="container">
+    <!--Cabecera-->
+    <header class="row">
+      <!--Inicio de navegación-->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <!--Logo-->
+            <div class="logo">
+              <img class="img-responsive" src="img/Logo.png" alt=""><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+              <ul class="nav navbar-nav">
+                <li class="active">
+
+
+                </li>
+
+                <li class="dropdown">
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle menu-toggle" data-toggle="dropdown">
+                      Productos <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="#">Action</a>
+                      </li>
+                      <li>
+                        <a href="#">Another action</a>
+                      </li>
+                      <li>
+                        <a href="#">Something else here</a>
+                      </li>
+                      <li>
+                        <a href="#">Separated link</a>
+                      </li>
+                      <li>
+                        <a href="#">One more separated link</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li></li>
+                </ul>
+                <form role="search" method="get" class="navbar-form navbar-left" role="search" action="<?php echo home_url( '/' ); ?>">
+                  <label>
+                    <input type="search" class="form-control" placeholder="Busca un producto …" value="" name="s" title="Search for:" />
+                    <input type="hidden" name="post_type" value="product" >
+                  </label>
+                  <input type="submit" class="btn btn-default search-submit" value="Buscar" />
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <a href="#">
+                      <span class="glyphicon glyphicon-shopping-cart blanco"></span>
+                      Carrito
+                    </a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" data-target=".bs-example-modal-sm" href="#">Inicia sesión</a>
+                  </li>
+                  <li>
+                    <a data-toggle="modal" data-target="#myModal" href="#">Registrarte</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        </header>
+        <!--Final de la cabecera-->
+
+        <!--Modal Inicio de sesión-->
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Iniciar sesión</h4>
+              </div>
+              <div class="modal-body">
+
+                <form class="form" role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"></div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">Remember me</label>
+                        </div>
+
+                      </form>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-primary">Iniciar sesión</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Fin Modal Inicio de sesión-->
+
+              <!--Modal Registro-->
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title" id="myModalLabel">Registrate</h4>
+                    </div>
+                    <div class="modal-body">
+
+                      <form role="form">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"></div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Repetir Password</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repetir Password"></div>
+
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox">Check me out</label>
+                                </div>
+
+                              </form>
+
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                              <button type="button" class="btn btn-primary">Registrarme</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--Fin Modal-->
+
+                      <section class="row container">
+                        <!--Producto principal-->
+                        <article class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+                          <img class="img-thumbnail img-responsive" src="http://placehold.it/500x500">
+                          <!--esto pertenece a la imagen principal -->
+                          <div class="page-header">
+                            <h1>
+                              Example page header
+                              <small>Subtext for header</small>
+                            </h1>
+                          </div>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, id, expedita, minima quasi iure nobis consequuntur
+                          </p>
+                          <div class="row">
+                            <div class="pull-right btn-group boton-agregar">
+                              <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-credit-card"></span>
+                              </button>
+                              <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-heart"></span>
+                              </button>
+                              <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-share-alt"></span>
+                              </button>
+                              <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-gift"></span>
+                              </button>
+                              <button type="button" class="btn btn-default">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                              </button>
+                              <button type="button" class="btn btn-warning">
+                                <small>USD</small>
+                                <small>$</small>
+                                11.99
+                              </button>
+                            </div>
+
+                          </div>
+
+                        </article>
+                        <aside>
+                          <div class="page-header">
+                            <h1>
+                              Example page header
+                              <small>Subtext for header</small>
+                            </h1>
+                          </div>
+                          <div class="row center-block col-xs-12 col-sm-6 col-md-6">
+                            <img class="img-thumbnail img-responsive" src="http://placehold.it/120x120">
+                            <img class="img-thumbnail img-responsive" src="http://placehold.it/120x120">
+                            <img class="img-thumbnail img-responsive" src="http://placehold.it/120x120">
+                            <img class="img-thumbnail img-responsive" src="http://placehold.it/120x120"></div>
+                            <div class="col-xs-6 col-md-6">
+
+                              <!--imagenes miniatura, la clase thumbnail coloca el marco-->
+                              <hr>
+                              <!--Descripción en tabs-->
+                              <div class="bs-example bs-example-tabs">
+                                <ul id="myTab" class="nav nav-tabs">
+                                  <li class="active">
+                                    <a href="#home" data-toggle="tab">Características</a>
+                                  </li>
+                                  <li class="">
+                                    <a href="#profile" data-toggle="tab">Reseña</a>
+                                  </li>
+                                  <li class="dropdown">
+                                    <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">
+                                      Comentarios <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                                      <li>
+                                        <a href="#dropdown1" tabindex="-1" data-toggle="tab">@fat</a>
+                                      </li>
+                                      <li>
+                                        <a href="#dropdown2" tabindex="-1" data-toggle="tab">@mdo</a>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                                <!--Tab Content-->
+                                <div id="myTabContent" class="tab-content">
+                                  <div class="tab-pane fade active in" id="home">
+                                    <p>
+                                      Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+                                    </p>
+                                  </div>
+                                  <div class="tab-pane fade" id="profile">
+                                    <p>
+                                      Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+                                    </p>
+                                  </div>
+                                  <div class="tab-pane fade" id="dropdown1">
+                                    <div class="bs-example">
+                                      <div class="media">
+                                        <a class="pull-left" href="#">
+                                          <img class="media-object img-thumbnail img-responsive" src="http://placehold.it/64x64"></a>
+                                          <div class="media-body">
+                                            <h4 class="media-heading">Media heading</h4>
+                                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="dropdown2">
+                                      <div class="bs-example">
+                                        <div class="media">
+                                          <a class="pull-left" href="#">
+                                            <img class="media-object img-thumbnail img-responsive" src="http://placehold.it/64x64"></a>
+                                            <div class="media-body">
+                                              <h4 class="media-heading">Media heading</h4>
+                                              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <hr>
+                                  <br>
+                                  <!--Call to action-->
+                                  <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
+                                    <button class="btn btn-lg btn-warning btn-block" type="warning">
+                                      <span class="glyphicon glyphicon-shopping-cart blanco"></span>
+                                      Agregar al carrito de compras
+                                    </button>
+                                    <button class="btn btn-lg btn-default btn-block" type="default">
+                                      <span class="glyphicon glyphicon-gift oscuro"></span>
+                                      Agregar a lista de deseos
+                                    </button>
+                                  </div>
+                                  <!--Final call to action-->
+                                </div>
+                              </aside>
+                            </section>
+                            
+                            <section class="row container">
+                              <ol class="breadcrumb">
+                                <!--coloca migas de pan -->
+                                <li>
+                                  <a href="#">Home</a>
+                                  <span class="divider">/</span>
+                                </li>
+                                <li>
+                                  <a href="#">Ropa</a>
+                                  <span class="divider">/</span>
+                                </li>
+                                <li class="active">Deportiva</li>
+                                <!--clase active siempre coloca los elementos con estado activo-->
+                              </ol>
+                            </section>
+                            <hr>
+                            
+                              <!--Descripción en tabs-->
+                              <div class="bs-example bs-example-tabs">
+                                <ul id="myTab" class="nav nav-tabs">
+                                  <li class="active">
+                                    <a href="#home" data-toggle="tab">Producto principal</a>
+                                  </li>
+                                  <li class="">
+                                    <a href="#profile" data-toggle="tab">Reseña</a>
+                                  </li>
+                                  <li class="dropdown">
+                                    <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">
+                                      Comentarios <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                                      <li>
+                                        <a href="#dropdown1" tabindex="-1" data-toggle="tab">@fat</a>
+                                      </li>
+                                      <li>
+                                        <a href="#dropdown2" tabindex="-1" data-toggle="tab">@mdo</a>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                                <!--Tab Content-->
+                                <div id="myTabContent" class="tab-content">
+                                  <div class="tab-pane fade active in" id="home">
+                                    <!--Productos relacionados-->
+                            <section class="row">
+                              <article class="col-xs-12 col-sm-6 col-md-3 box">
+                                <img class="img-thumbnail box img-responsive" src="http://placehold.it/600x600">
+                                <!--esto pertenece a la imagen -->
+                                <h3 class="item-name">Item Name</h3>
+                                <h4 class="item-def">Short Item Description</h4>
+                                <!--etiqueta "i" coloca iconos de bootsptrap-->
+                                <!--la clase icon-star define el tipo de icono-->
+                                <!--la clase btn-group define botones agrupados-->
+                                <div class="btn-group boton-agregar">
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-gift"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-warning">
+                                    <small>USD</small>
+                                    <small>$</small>
+                                    11.99
+                                  </button>
+                                </div>
+                              </article>
+                              <article class="col-xs-12 col-sm-6 col-md-3 box">
+                                <img class="img-thumbnail box img-responsive" src="http://placehold.it/600x600">
+                                <!--esto pertenece a la imagen -->
+                                <h3 class="item-name">Item Name</h3>
+                                <h4 class="item-def">Short Item Description</h4>
+                                <!--etiqueta "i" coloca iconos de bootsptrap-->
+                                <!--la clase icon-star define el tipo de icono-->
+                                <!--la clase btn-group define botones agrupados-->
+                                <div class="btn-group boton-agregar">
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-gift"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-warning">
+                                    <small>USD</small>
+                                    <small>$</small>
+                                    11.99
+                                  </button>
+                                </div>
+                              </article>
+                              <article class="col-xs-12 col-sm-6 col-md-3 box">
+                                <img class="img-thumbnail box img-responsive" src="http://placehold.it/600x600">
+                                <!--esto pertenece a la imagen -->
+                                <h3 class="item-name">Item Name</h3>
+                                <h4 class="item-def">Short Item Description</h4>
+                                <!--etiqueta "i" coloca iconos de bootsptrap-->
+                                <!--la clase icon-star define el tipo de icono-->
+                                <!--la clase btn-group define botones agrupados-->
+                                <div class="btn-group boton-agregar">
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-gift"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-warning">
+                                    <small>USD</small>
+                                    <small>$</small>
+                                    11.99
+                                  </button>
+                                </div>
+                              </article>
+                              <article class="col-xs-12 col-sm-6 col-md-3 box">
+                                <img class="img-thumbnail box img-responsive" src="http://placehold.it/600x600">
+                                <!--esto pertenece a la imagen -->
+                                <h3 class="item-name">Item Name</h3>
+                                <h4 class="item-def">Short Item Description</h4>
+                                <!--etiqueta "i" coloca iconos de bootsptrap-->
+                                <!--la clase icon-star define el tipo de icono-->
+                                <!--la clase btn-group define botones agrupados-->
+                                <div class="btn-group boton-agregar">
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-gift"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-warning">
+                                    <small>USD</small>
+                                    <small>$</small>
+                                    11.99
+                                  </button>
+                                </div>
+                              </article>
+
+                            </section>
+                            <!--final productos relacionados -->
+                                  </div>
+                                  <div class="tab-pane fade" id="profile">
+                                   <!--Productos relacionados-->
+                            <section class="row">
+                              <article class="col-xs-12 col-sm-6 col-md-3 box">
+                                <img class="img-thumbnail box img-responsive" src="http://placehold.it/600x600">
+                                <!--esto pertenece a la imagen -->
+                                <h3 class="item-name">Item Name</h3>
+                                <h4 class="item-def">Short Item Description</h4>
+                                <!--etiqueta "i" coloca iconos de bootsptrap-->
+                                <!--la clase icon-star define el tipo de icono-->
+                                <!--la clase btn-group define botones agrupados-->
+                                <div class="btn-group boton-agregar">
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-gift"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-warning">
+                                    <small>USD</small>
+                                    <small>$</small>
+                                    11.99
+                                  </button>
+                                </div>
+                              </article>
+                              <article class="col-xs-12 col-sm-6 col-md-3 box">
+                                <img class="img-thumbnail box img-responsive" src="http://placehold.it/600x600">
+                                <!--esto pertenece a la imagen -->
+                                <h3 class="item-name">Item Name</h3>
+                                <h4 class="item-def">Short Item Description</h4>
+                                <!--etiqueta "i" coloca iconos de bootsptrap-->
+                                <!--la clase icon-star define el tipo de icono-->
+                                <!--la clase btn-group define botones agrupados-->
+                                <div class="btn-group boton-agregar">
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-gift"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-warning">
+                                    <small>USD</small>
+                                    <small>$</small>
+                                    11.99
+                                  </button>
+                                </div>
+                              </article>
+                              <article class="col-xs-12 col-sm-6 col-md-3 box">
+                                <img class="img-thumbnail box img-responsive" src="http://placehold.it/600x600">
+                                <!--esto pertenece a la imagen -->
+                                <h3 class="item-name">Item Name</h3>
+                                <h4 class="item-def">Short Item Description</h4>
+                                <!--etiqueta "i" coloca iconos de bootsptrap-->
+                                <!--la clase icon-star define el tipo de icono-->
+                                <!--la clase btn-group define botones agrupados-->
+                                <div class="btn-group boton-agregar">
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-gift"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-warning">
+                                    <small>USD</small>
+                                    <small>$</small>
+                                    11.99
+                                  </button>
+                                </div>
+                              </article>
+                              <article class="col-xs-12 col-sm-6 col-md-3 box">
+                                <img class="img-thumbnail box img-responsive" src="http://placehold.it/600x600">
+                                <!--esto pertenece a la imagen -->
+                                <h3 class="item-name">Item Name</h3>
+                                <h4 class="item-def">Short Item Description</h4>
+                                <!--etiqueta "i" coloca iconos de bootsptrap-->
+                                <!--la clase icon-star define el tipo de icono-->
+                                <!--la clase btn-group define botones agrupados-->
+                                <div class="btn-group boton-agregar">
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-gift"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-warning">
+                                    <small>USD</small>
+                                    <small>$</small>
+                                    11.99
+                                  </button>
+                                </div>
+                              </article>
+
+                            </section>
+                            <!--final productos relacionados -->
+                                  </div>
+                                  <div class="tab-pane fade" id="dropdown1">
+                                    <div class="bs-example">
+                                      <div class="media">
+                                        <a class="pull-left" href="#">
+                                          <img class="media-object img-thumbnail img-responsive" src="http://placehold.it/64x64"></a>
+                                          <div class="media-body">
+                                            <h4 class="media-heading">Media heading</h4>
+                                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="dropdown2">
+                                      <div class="bs-example">
+                                        <div class="media">
+                                          <a class="pull-left" href="#">
+                                            <img class="media-object img-thumbnail img-responsive" src="http://placehold.it/64x64"></a>
+                                            <div class="media-body">
+                                              <h4 class="media-heading">Media heading</h4>
+                                              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            
+                            <hr>
+                            
+
+                            <!--Ultimos productos vistos-->
+                            <section class="row">
+                              <article class="col-xs-12 col-sm-6 col-md-3 box">
+                                <img class="img-thumbnail box img-responsive" src="http://placehold.it/600x600">
+                                <!--esto pertenece a la imagen -->
+                                <h3 class="item-name">Item Name</h3>
+                                <h4 class="item-def">Short Item Description</h4>
+                                <!--etiqueta "i" coloca iconos de bootsptrap-->
+                                <!--la clase icon-star define el tipo de icono-->
+                                <!--la clase btn-group define botones agrupados-->
+                                <div class="btn-group boton-agregar">
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-gift"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-warning">
+                                    <small>USD</small>
+                                    <small>$</small>
+                                    11.99
+                                  </button>
+                                </div>
+                              </article>
+                              <article class="col-xs-12 col-sm-6 col-md-3 box">
+                                <img class="img-thumbnail box img-responsive" src="http://placehold.it/600x600">
+                                <!--esto pertenece a la imagen -->
+                                <h3 class="item-name">Item Name</h3>
+                                <h4 class="item-def">Short Item Description</h4>
+                                <!--etiqueta "i" coloca iconos de bootsptrap-->
+                                <!--la clase icon-star define el tipo de icono-->
+                                <!--la clase btn-group define botones agrupados-->
+                                <div class="btn-group boton-agregar">
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-gift"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-warning">
+                                    <small>USD</small>
+                                    <small>$</small>
+                                    11.99
+                                  </button>
+                                </div>
+                              </article>
+                              <article class="col-xs-12 col-sm-6 col-md-3 box">
+                                <img class="img-thumbnail box img-responsive" src="http://placehold.it/600x600">
+                                <!--esto pertenece a la imagen -->
+                                <h3 class="item-name">Item Name</h3>
+                                <h4 class="item-def">Short Item Description</h4>
+                                <!--etiqueta "i" coloca iconos de bootsptrap-->
+                                <!--la clase icon-star define el tipo de icono-->
+                                <!--la clase btn-group define botones agrupados-->
+                                <div class="btn-group boton-agregar">
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-gift"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-warning">
+                                    <small>USD</small>
+                                    <small>$</small>
+                                    11.99
+                                  </button>
+                                </div>
+                              </article>
+                              <article class="col-xs-12 col-sm-6 col-md-3 box">
+                                <img class="img-thumbnail box img-responsive" src="http://placehold.it/600x600">
+                                <!--esto pertenece a la imagen -->
+                                <h3 class="item-name">Item Name</h3>
+                                <h4 class="item-def">Short Item Description</h4>
+                                <!--etiqueta "i" coloca iconos de bootsptrap-->
+                                <!--la clase icon-star define el tipo de icono-->
+                                <!--la clase btn-group define botones agrupados-->
+                                <div class="btn-group boton-agregar">
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share-alt"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-gift"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                  </button>
+                                  <button type="button" class="btn btn-warning">
+                                    <small>USD</small>
+                                    <small>$</small>
+                                    11.99
+                                  </button>
+                                </div>
+                              </article>
+                            </section>
+
+                            <!--Final de ultimos productos vistos -->
+                            <!--Paginación-->
+                            <section class="row container">
+                              <ul class="pagination">
+                                <li>
+                                  <a href="#">&raquo;</a>
+                                </li>
+                                <li>
+                                  <a href="#">1</a>
+                                </li>
+                                <li>
+                                  <a href="#">2</a>
+                                </li>
+                                <li>
+                                  <a href="#">3</a>
+                                </li>
+                                <li>
+                                  <a href="#">4</a>
+                                </li>
+                                <li>
+                                  <a href="#">5</a>
+                                </li>
+                                <li>
+                                  <a href="#">&raquo;</a>
+                                </li>
+                              </ul>
+                            </section>
+                            <!--Final Paginación-->
+                            <footer>
+                              <!--Landing footer-->
+                              <section class="row thumbnails">
+
+                                <article class="col-xs-12 col-sm-12 col-md-6 box">
+                                  <img class="img-thumbnail box img-responsive" src="http://placehold.it/555x214"></article>
+                                  <article class="col-xs-12 col-sm-6 col-md-6 box">
+                                    <img class="img-thumbnail box img-responsive" src="http://placehold.it/555x214">
+                                  </article>
+                                </section>
+                                <!--Fin de Landing footer-->
+                                <section class="row">
+                                  <!--Esto es una cabecera con fila-->
+                                  <hr>
+                                </section>
+                                <section class="row">
+                                  <article class="col-md-3">
+                                    <img class="box img-thumbnail img-responsive" src="http://placehold.it/240x170"></article>
+                                    <article class="col-lg-3">
+                                      <h4>
+                                        Compra tu
+                                        <small>Gift Card</small>
+                                      </h4>
+                                      <h5>Segundo titulo de mi articulo</h5>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, aspernatur, modi repudiandae iste ipsum.
+                                      </p>
+                                      <div class="btn-group boton-agregar">
+                                        <button type="button" class="btn btn-info">
+                                          <small>Gift Card</small>
+                                        </button>
+
+                                        <button type="button" class="btn btn-default">
+                                          <span class="glyphicon glyphicon-gift oscuro"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-default">
+                                          <span class="glyphicon glyphicon-credit-card oscuro"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-warning">
+                                          <small>$</small>
+                                          100
+                                        </button>
+                                      </div>
+                                    </article>
+                                    <article class="col-md-3">
+                                      <img class="box img-thumbnail img-responsive" src="http://placehold.it/240x170"></article>
+                                      <article class="col-md-3">
+                                        <h4>
+                                          Zoom
+                                          <small>Track</small>
+                                        </h4>
+                                        <h5>Segundo titulo de mi articulo</h5>
+                                        <p>
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, aspernatur, modi repudiandae iste ipsum.
+                                        </p>
+                                        <div class="btn-group boton-agregar">
+                                          <button type="button" class="btn btn-info">
+                                            <small>Tracking</small>
+                                          </button>
+
+                                          <button type="button" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-road"></span>
+                                          </button>
+                                          <button type="button" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-barcode"></span>
+                                          </button>
+                                          <button type="button" class="btn btn-warning">
+                                            <span class="glyphicon glyphicon-map-marker"></span>
+                                          </button>
+                                        </div>
+                                      </article>
+
+                                    </section>
+                                    <hr>
+                                    <section class="row">
+                                      <article class="col-md-5">
+                                        <h4>
+                                          <b>Como calculamos tu envio</b>
+                                        </h4>
+                                        <p>
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, aspernatur, modi repudiandae iste ipsum.Deserunt, aspernatur, modi repudiandae iste ipsum.
+                                        </p>
+                                      </article>
+                                      <div class="col-xs-3 col-md-2">
+                                        <h5>
+                                          <b>Servicio al cliente</b>
+                                        </h5>
+                                        <p>
+                                          <a href="#">Envíos a USA, Venezuela y Colombia</a>
+                                          <br>
+                                          <a href="#">Servicio de Garantia</a>
+                                          <br>
+                                          <a href="#">Contact Info</a>
+                                          <br>
+                                          <a href="#">Etc..</a>
+                                          <br>
+                                          <a href="#">Etc..</a>
+                                          <br>
+                                        </p>
+                                      </div>
+                                      <article class="col-md-5">
+                                        <h4>
+                                          <b>Politicas de Reembolso</b>
+                                        </h4>
+                                        <p>
+                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, aspernatur, modi repudiandae iste ipsumaspernatur, modi repudiandae iste ipsum.
+                                        </p>
+                                      </article>
+                                    </section>
+                                    <!-- row refiere a las filas , span a las columnas, seccion a las secciones, article a los articulos, aside a los elementos relacionados-->
+                                    <hr>
+                                  </div>
+                                </footer>
+                                <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+                                <script src="js/jquery-1.11.1.min.js"></script>
+                                <!--<script src="http://code.jquery.com/jquery.js"></script>
+                                cdn-->
+                                <!-- Include all compiled plugins (below), or include individual files as needed -->
+                                <script src="js/jquery-2.1.1.min.js"></script>
+                                <script src="js/classie.js"></script>
+                                <script src="js/uiMorphingButton_inflow.js"></script>
+                                <script src="js/uiMorphingButton_fixed.js"></script>
+                                <script src="js/bootstrap.min.js"></script>
+                                 
+                              </body>
+
+                              </html>

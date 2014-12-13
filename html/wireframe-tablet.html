@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+	 <title>Wireframe</title>
+	 <link rel="stylesheet" href="css/bootstrap.min.css">
+	 <link rel="stylesheet" href="css/wireframe.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <!-- header>div.container>nav.navbar.navbar-default>(a.navbar-brand{Brand})+(.navbar-header>button.navbar-toggle.collapsed>span.icon-bar*3)-->
+   <header>
+   	<div class="container">
+   		<nav class="navbar navbar-default" role="navigation">
+   			<a href="#" class="navbar-brand">Brand</a>
+   			<div class="navbar-header">
+          <!-- HAY QUE AGREGAR EL DATA-TOGGLE Y DATA-TARGET PARA QUE DESPLIEGUE EL MENU EN MOBILE -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-wi">
+            <span class="sr-only">Toggle navigation</span>
+   					<span class="icon-bar"></span>
+   					<span class="icon-bar"></span>
+   					<span class="icon-bar"></span>
+   				</button>
+        </div>
+        
+        <!-- VISTA DEL MENU -->
+        <!-- div.collapse.navbar-collapse#bs-example-navbar-collapse-1>ul.nav.navbar-nav.navbar-right>li*4>a{Link $} -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-wi">
+         <ul class="nav navbar-nav navbar-right">
+           <li><a href="">Link 1</a></li>
+           <li><a href="">Link 2</a></li>
+           <li><a href="">Link 3</a></li>
+           <li><a href="">Link 4</a></li>
+         </ul>
+       </div>   
+
+   		</nav>
+   	</div>
+   </header>
+  <!-- HEADER END-->
+  
+  <!-- SLIDER -->
+  <!-- section.row>img.img-responsive[src="http://placehold.it/1680x500"]-->
+  <section class="row">
+    <img src="http://placehold.it/1680x500" alt="" class="img-responsive">
+  </section>
+  <!-- SLIDER END -->
+
+  <!-- CONTENT -->
+  <!--   .container>section.row>hr+(article.col-xs-6*4>img.img-responsive[src="http://placehold.it/600x500"]+.well.text-center>h5{Descripcion})-->
+  <div class="container">
+  	<section class="row">
+  		<hr>
+  		<article class="col-xs-12 col-sm-6 col-md-3">
+  			<img src="http://placehold.it/600x500" alt="" class="img-responsive">
+  			<div class="well text-center">
+  				<h5>Descripcion</h5>
+  			</div>
+  		</article>
+  		<article class="col-xs-12 col-sm-6 col-md-3">
+  			<img src="http://placehold.it/600x500" alt="" class="img-responsive">
+  			<div class="well text-center">
+  				<h5>Descripcion</h5>
+  			</div>
+  		</article>
+  		<article class="col-xs-12 col-sm-6 col-md-3">
+  			<img src="http://placehold.it/600x500" alt="" class="img-responsive">
+  			<div class="well text-center">
+  				<h5>Descripcion</h5>
+  			</div>
+  		</article>
+  		<article class="col-xs-12 col-sm-6 col-md-3">
+  			<img src="http://placehold.it/600x500" alt="" class="img-responsive">
+  			<div class="well text-center">
+  				<h5>Descripcion</h5>
+  			</div>
+  		</article>
+  	</section>
+  </div>
+  <!-- CONTENT END -->
+
+  <!-- DESCRIPTION -->
+<!--.container>.row>.col-md-12>.row>(.col-md-8>.well>.row>(.col-xs-6.col-md-6>h4{Header}+hr+h5{Lorem15}+.visible-xs>a.btn.btn-default{Call To Action!}*2)+(.col-xs-6.col-md-6>p>lorem))+(.hidden-xs.col-md-4>h4{Get In Touch!}+hr+a.btn.btn-default{Call To Action!}*2)-->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="well">
+							<div class="row">
+								<div class="col-xs-6 col-md-6">
+									<h4>Header</h4>
+									<hr>
+									<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ullam quasi labore libero vitae nam.</h5>
+									<div class="visible-xs" align="center">
+										<a href="#" class="btn btn-lg btn-danger">Call To Action!</a><br><br>
+										<a href="#" class="btn btn-lg btn-danger">Call To Action!</a>
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-6">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat architecto eligendi sint iste reiciendis recusandae culpa, nesciunt optio ad explicabo, quisquam deleniti voluptas nam, itaque ea fuga? Quos laboriosam, ad.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat architecto eligendi sint iste reiciendis recusandae culpa, nesciunt optio ad explicabo, quisquam deleniti voluptas nam, itaque ea fuga? Quos laboriosam, ad.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="hidden-xs col-sm-12 col-md-4">
+						<h4>Get In Touch!</h4>
+						<hr>
+						<a href="#" class="btn btn-lg btn-primary col-sm-12">Call To Action!</a><br><br><br>
+						<a href="#" class="btn btn-lg btn-primary col-sm-12">Call To Action!</a>
+					</div>
+				</div> <!--row-->
+			</div> <!--col-md-12-->
+		</div><!-- row-->
+	</div> <!--container-->
+  <!-- DESCRIPTION END -->
+
+  <!-- FOOTER -->
+  <!-- footer>.container>.row>.col-xs-12>(hr+h5(lorem5))+nav.text-right>ul.list-inline>li*4>a{Link $}-->
+  <footer>
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-xs-12">
+  				<hr>
+  				<h5>Lorem ipsum dolor sit amet.</h5>
+  				<nav class="text-right">
+  					<ul class="list-inline">
+  						<li><a href="">Link 1</a></li>
+  						<li><a href="">Link 2</a></li>
+  						<li><a href="">Link 3</a></li>
+  						<li><a href="">Link 4</a></li>
+  					</ul>
+  				</nav>
+  			</div>
+  		</div>
+  	</div>
+  </footer>
+  <!-- FOOTER END -->
+  
+  <!-- SCRIPTS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

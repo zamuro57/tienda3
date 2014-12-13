@@ -1,0 +1,86 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300);
+/*font-family: 'Open Sans', sans-serif;*/
+
+body {margin:0; background-color: #e3e3e3;}
+.container {width: 960px; margin: 0 auto;}
+
+.intro {
+   background: url(../images/bg-bg.png); 
+   background-size:cover;
+   background-repeat:no-repeat;
+   background-attachment: fixed;
+   height: 800px;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 49.35px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    margin-top: 110px;
+    line-height: 62px;
+}
+
+.brand {
+    background: url(../images/Logo.png);
+    height: 273px;
+    width: 273px;
+    margin: 0 auto;
+    top: 68px;
+    position: relative;
+}
+
+.callto {
+    width: 334px;
+    height: 334px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 1px 0.00px rgba(0, 0, 0, 0.28);
+    margin: 0 auto;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.c-form {
+    width: 264px;
+    height: 36px;
+    border-radius: 2px;
+    border: 1px solid #e0e0e0;
+    margin: 25px 0;
+    padding-left: 10px;
+}
+
+.img-form {
+    background: url(../images/img-form.png);
+    height: 87px;
+    width: 335px;
+}
+
+.callto p {
+    color: #938e8e;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15.35px;
+    text-align: center;
+}
+
+.btn-press {
+    background-color: #227dd3;
+    width: 192px;
+    height: 45px;
+    border-radius: 2px;
+    color: #ffffff;
+    font-size: 31.35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
